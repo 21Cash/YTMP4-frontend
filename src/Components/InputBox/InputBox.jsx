@@ -3,13 +3,14 @@ import { backendUrl } from "../../constants";
 
 const InputBox = () => {
   const [inputFieldData, setInputFieldData] = useState("");
+  const [selectedQuality, setSelectedQuality] = useState("144p");
 
   const handleDownloadClick = () => {
-    const apiUrl = `${backendUrl}/convert?url=${inputFieldData}`;
+    const apiUrl = `${backendUrl}/download?url=${inputFieldData}&quality=${selectedQuality}`;
 
     const downloadLink = document.createElement("a");
     downloadLink.href = apiUrl;
-    downloadLink.download = "audio_file.mp3";
+    downloadLink.download = "audio_file.mp4";
 
     document.body.appendChild(downloadLink);
 
@@ -19,9 +20,23 @@ const InputBox = () => {
   };
 
   const handleContainerClick = () => {
-    // Clear the input field when the container is clicked
-    setInputFieldData("");
+    // setInputFieldData("");
   };
+
+  const handleQualityChange = (e) => {
+    setSelectedQuality(e.target.value);
+  };
+
+  const qualityOptions = [
+    "144p",
+    "240p",
+    "360p",
+    "480p",
+    "720p",
+    "1080p",
+    "1440p",
+    "2160p",
+  ];
 
   const styles = {
     container: {
@@ -70,6 +85,20 @@ const InputBox = () => {
           onChange={(e) => setInputFieldData(e.target.value)}
           style={styles.input}
         />
+      </label>
+      <label style={styles.label}>
+        Quality:
+        <select
+          value={selectedQuality}
+          onChange={handleQualityChange}
+          style={styles.input}
+        >
+          {qualityOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
       </label>
       <button onClick={handleDownloadClick} style={styles.button}>
         Download

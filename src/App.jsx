@@ -1,14 +1,16 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./Components/Homepage/Homepage";
+import VideoList from "./Components/VideoList/VideoList";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Navigate to={"/Homepage"} />} />
-        <Route path="/Homepage" element={<Homepage />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/VideoList" element={<VideoList />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
