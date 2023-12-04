@@ -47,7 +47,7 @@ const Homepage = () => {
         <p>
           © {currentYear} Sushil L, No Rights Reserved |{" "}
           <a
-            href="https://github.com/21Cash/YTMP3-frontend"
+            href="https://github.com/21Cash/YTMP4-frontend"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#4a90e2", textDecoration: "none" }}
