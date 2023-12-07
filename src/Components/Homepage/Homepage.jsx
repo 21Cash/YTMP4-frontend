@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import InputBox from "../InputBox/InputBox";
 import ServerStatus from "../ServerStatus/ServerStatus";
 import { Link } from "react-router-dom";
+
 const Homepage = () => {
   useEffect(() => {
     document.documentElement.style.overflow = "hidden";
@@ -24,17 +25,9 @@ const Homepage = () => {
       padding: "0px 0px 0px 10px",
       fontSize: "2rem",
       margin: 0,
-      color: "#4a90e2",
-      textDecoration: "none",
-    },
-    navTitle21YTMP4: {
-      padding: "0px 0px 0px 10px",
-      fontSize: "2rem",
-      margin: 0,
-      color: "#fff",
-      textDecoration: "none",
     },
   };
+
   const Footer = () => {
     const currentYear = new Date().getFullYear();
 
@@ -86,27 +79,9 @@ const Homepage = () => {
           justifyContent: "space-between",
         }}
       >
-        <div
-          style={{
-            backgroundColor: "#333",
-            color: "#4a90e2",
-            padding: "10px",
-            textAlign: "center",
-            boxSizing: "border-box",
-            height: "60px",
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <Link to="/" style={{ textDecoration: "none", color: "#4a90e2" }}>
-            <h1 style={styles.navTitle}>21YTMP3</h1>
-          </Link>
-        </div>
+        <Link to="/" style={{ textDecoration: "none", color: "#4a90e2" }}>
+          <h1 style={styles.navTitle}>21YTMP4</h1>
+        </Link>
 
         <ServerStatus />
       </div>
