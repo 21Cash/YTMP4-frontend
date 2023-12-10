@@ -1,19 +1,9 @@
 import React, { useEffect } from "react";
-import InputBox from "../InputBox/InputBox";
+import FastBox from "./FastBox";
 import ServerStatus from "../ServerStatus/ServerStatus";
 import { Link } from "react-router-dom";
 
-const Homepage = () => {
-  useEffect(() => {
-    document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.documentElement.style.overflow = "visible";
-      document.body.style.overflow = "visible";
-    };
-  }, []);
-
+const Fast = () => {
   const styles = {
     title: {
       fontSize: "2.5rem",
@@ -102,7 +92,7 @@ const Homepage = () => {
         }}
       >
         <h1 style={styles.title}>Download Video</h1>
-        <InputBox />
+        <FastBox />
       </div>
 
       <Footer />
@@ -110,4 +100,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Fast;
