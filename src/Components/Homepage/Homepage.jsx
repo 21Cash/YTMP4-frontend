@@ -53,8 +53,12 @@ const Homepage = () => {
             rel="noopener noreferrer"
             style={{ color: "#4a90e2", textDecoration: "none" }}
           >
-            View Source Code
+            View Source
           </a>
+          {" | "}
+          <Link to="/fast" style={{ color: "#4a90e2", textDecoration: "none" }}>
+            <a>Fast Route</a>
+          </Link>
         </p>
       </div>
     );
