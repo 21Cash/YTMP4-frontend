@@ -58,6 +58,8 @@ const VideoList = () => {
       backgroundColor: "#1e1e1e",
       color: "#fff",
       padding: "20px",
+      maxWidth: "100%", // Adjusts container width for smaller screens
+      overflowX: "auto", // Allows horizontal scrolling for small screens
     },
     videoTable: {
       width: "100%",
@@ -67,15 +69,21 @@ const VideoList = () => {
     tableCell: {
       border: "1px solid #fff",
       padding: "8px",
+      maxWidth: "150px", // Adjust maximum width of cells for smaller screens
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
     },
     tableHeader: {
       backgroundColor: "#333",
+      color: "#fff",
+      padding: "8px",
     },
     linkButton: {
       backgroundColor: "#007bff",
       color: "#fff",
       border: "none",
-      padding: "5px 10px",
+      padding: "8px 15px", // Adjust button padding for better touch accessibility
       borderRadius: "5px",
       cursor: "pointer",
     },
