@@ -44,6 +44,18 @@ const VideoList = () => {
     return modifiedMimeType;
   };
 
+  function formatBytes(bytes) {
+    if (bytes < 1024) {
+      return bytes + " bytes";
+    } else if (bytes < 1048576) {
+      return (bytes / 1024).toFixed(2) + "KB";
+    } else if (bytes < 1073741824) {
+      return (bytes / 1048576).toFixed(2) + "MB";
+    } else {
+      return (bytes / 1073741824).toFixed(2) + "GB";
+    }
+  }
+
   // Prioritize videos with both hasAudio and hasVideo
   const prioritizedVideos = videoData.filter(
     (video) => video.hasAudio && video.hasVideo
@@ -120,7 +132,11 @@ const VideoList = () => {
               <td style={styles.tableCell}>
                 {extractMimeType(video.mimeType, video.itag)}
               </td>
-              <td style={styles.tableCell}>{video.qualityLabel}</td>
+              <td style={styles.tableCell}>
+                {video.qualityLabel}
+
+                {`(${formatBytes(video.contentLength)})`}
+              </td>
               <td style={{ ...styles.tableCell, textAlign: "center" }}>
                 <button
                   style={styles.linkButton}
