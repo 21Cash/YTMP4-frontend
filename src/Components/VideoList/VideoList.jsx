@@ -135,7 +135,7 @@ const VideoList = () => {
               <td style={styles.tableCell}>
                 {video.qualityLabel}
 
-                {`(${formatBytes(video.contentLength)})`}
+                {` (${formatBytes(video.contentLength)})`}
               </td>
               <td style={{ ...styles.tableCell, textAlign: "center" }}>
                 <button
