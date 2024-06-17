@@ -36,7 +36,7 @@ const Fast = () => {
         }}
       >
         <p>
-          © {currentYear} Sushil L, No Rights Reserved |{" "}
+          Made With ❤ Sushil L |{" "}
           <a
             href="https://github.com/21Cash/YTMP4-frontend"
             target="_blank"

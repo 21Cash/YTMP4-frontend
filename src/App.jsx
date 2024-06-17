@@ -8,7 +8,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        {/* <Route path="/" element={<Homepage />} /> */}
+        {/* Instead of Direct Download, Making The Default Path to Fast Route */}
+        <Route path="/" element={<Fast />} />
         <Route path="/VideoList" element={<VideoList />} />
         <Route path="/Fast" element={<Fast />} />
       </Routes>
