@@ -44,6 +44,23 @@ const Fast = () => {
             style={{ color: "#4a90e2", textDecoration: "none" }}
           >
             View Source Code
+          </a>{" "}
+          |{" "}
+          <Link
+            to="/Direct"
+            style={{ color: "#4a90e2", textDecoration: "none" }}
+          >
+            {" "}
+            Direct Download{" "}
+          </Link>
+          |{" "}
+          <a
+            href="https://21ytmp3.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#4a90e2", textDecoration: "none" }}
+          >
+            YT MP3 Downloader
           </a>
         </p>
       </div>

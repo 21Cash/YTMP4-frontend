@@ -46,19 +46,32 @@ const Homepage = () => {
         }}
       >
         <p>
-          © {currentYear} Sushil L, No Rights Reserved |{" "}
+          Made With ❤ Sushil L |{" "}
           <a
             href="https://github.com/21Cash/YTMP4-frontend"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#4a90e2", textDecoration: "none" }}
           >
-            View Source
-          </a>
-          {" | "}
-          <Link to="/fast" style={{ color: "#4a90e2", textDecoration: "none" }}>
-            <a>Fast Route</a>
+            View Source Code
+          </a>{" "}
+          |{" "}
+          <Link
+            to="/Direct"
+            style={{ color: "#4a90e2", textDecoration: "none" }}
+          >
+            {" "}
+            Direct Download{" "}
           </Link>
+          |{" "}
+          <a
+            href="https://21ytmp3.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#4a90e2", textDecoration: "none" }}
+          >
+            YT MP3 Downloader
+          </a>
         </p>
       </div>
     );
